@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root{
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Open sans", sans-serif;
+}
+
+.custom_container{
+    width: 1200px;
+    margin: auto;
+}
+
+
+
+/* ----------------------------------------------------------------header and slider ------------------------------------- */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.199);
+}
+nav {
+  width: 1200px;
+  margin: auto;
+  color: white;
+  background: rgba(255, 255, 255, 0.074);
+  box-shadow: 1px 2px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border-radius: 10px;
+}
+
+.menu-links:hover a{
+color: rgb(103, 103, 218);
+transition: 400ms;
+}
+
+.heroBanner {
+  position: absolute;
+  top: 40%;
+  left: 600px;
+  text-align: center;
+  letter-spacing: 3px;
+}
+.artistName:hover{
+cursor: pointer;
+}
+
+.slideshow .slick-dots li {
+  display: flex;
+  flex-direction: column;
+}
+
+.slideshow {
+  position: relative;
+  z-index: 1;
+  height: 750px;
+  min-width: 768px;
+  overflow: hidden;
+}
+
+.slideshow * {
+  outline: none;
+}
+
+.slideshow .slider {
+  box-shadow: 0 20px 50px -25px black;
+}
+
+.slideshow .slider-track {
+  -webkit-transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+  transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.slideshow .item {
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.slideshow .item img {
+  width: 100%;
+  -webkit-transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+  transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.slideshow .item.slick-active img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-animation: cssAnimation 8s 1 ease-in-out backwards;
+  animation: cssAnimation 8s 1 ease-in-out backwards;
+}
+
+@keyframes cssAnimation {
+  from {
+    -webkit-transform: scale(1.1) translate(0px);
+  }
+
+  to {
+    -webkit-transform: scale(1) translate(0px);
+  }
+}
+
+@-webkit-keyframes cssAnimation {
+  from {
+    -webkit-transform: scale(1) translate(0px);
+  }
+
+  to {
+    -webkit-transform: scale(1.1) translate(0px);
+  }
+}
+
+.slider .slick-initialized .slick-slider .slick-dotted {
+  position: relative;
+}
+
+.slick-dots {
+  position: absolute;
+  left: 95%;
+  bottom: 51%;
+  display: flex;
+  flex-direction: column;
+  width: 10px;
+}
+
+/* ----------------------------------------------------------------header and slider end ------------------------------------- */
+
+
+
+/* ----------------------------------------------About Section----------------------------------------------------------------- */
+
+.about_section{
+    margin-top: -18px;
+}
+/* ----------------------------------------------About Section end-------------------------------------------------------------- */
+
+
+
